@@ -36,11 +36,7 @@ tags: []
 
 ## Worked On
 
-- ...
-
 ## Notes
-
-- ...
 ```
 
 The front matter keeps basic metadata easy to parse or query later, while the rest of the file stays flexible and human-readable.
@@ -73,11 +69,7 @@ tags: []
 
 ## Worked On
 
-- ...
-
 ## Notes
-
-- ...
 EOF
     fi
 
