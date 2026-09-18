@@ -28,8 +28,8 @@ A minimal daily `README.md`:
 ```markdown
 ---
 date: 2026-09-18
-projects: []
 tags: []
+projects: []
 ---
 
 # 2026-09-18
@@ -61,8 +61,8 @@ daily() {
         cat >"$readme" <<EOF
 ---
 date: $today
-projects: []
 tags: []
+projects: []
 ---
 
 # $today
