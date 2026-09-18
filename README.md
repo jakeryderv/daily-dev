@@ -51,11 +51,38 @@ Add the following to `~/.bashrc` or `~/.zshrc`:
 
 ```bash
 daily() {
-  local dir
-  dir="$HOME/daily-dev/log/$(date +%F)"
+    local dir
+    local readme
+    local today
 
-  mkdir -p "$dir"
-  cd "$dir" || return
+    today="$(date +%F)"
+    dir="$HOME/daily-dev/log/$today"
+    readme="$dir/README.md"
+
+    mkdir -p "$dir"
+
+    if [[ ! -f "$readme" ]]; then
+        cat >"$readme" <<EOF
+---
+date: $today
+projects: []
+tags: []
+---
+
+# $today
+
+## Worked On
+
+- ...
+
+## Notes
+
+- ...
+EOF
+    fi
+
+    cd "$dir" || return
+    "${EDITOR:-nvim}" README.md
 }
 ```
 
