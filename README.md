@@ -2,6 +2,10 @@
 
 An ongoing record of things I build, learn, and experiment with.
 
+zero AI work in this repo, goal is to learn, practice, and write all of this myself
+
+---
+
 Each dated directory contains:
 - a short daily log in `README.md`
 - self-contained directories for anything I worked on that day
@@ -46,3 +50,7 @@ projects:
 
 - ...
 ```
+
+use `tags:` to link topics/concepts, and `projects:` to link the independent projects worked on
+
+daily/one-off projects live in the daily dir, ongoing ones land in `projects/` in root dir, so these daily readme's can link both
