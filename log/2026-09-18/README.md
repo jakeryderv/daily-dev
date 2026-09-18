@@ -1,7 +1,7 @@
 ---
 date: 2026-09-18
 tags: [python]
-projects: [fluent-python]
+projects: []
 ---
 
 # 2026-09-18
