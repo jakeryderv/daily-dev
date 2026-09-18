@@ -12,25 +12,8 @@ add the following to `~/.bashrc` or `~/.zshrc`:
 
 ```bash
 daily() {
-  local root="$HOME/path/to/daily-dev/log"
-  local today
-  today="$(date +%F)"
-
-  local dir="$root/$today"
-
+  local dir="$HOME/daily-dev/log/$(date +%F)"
   mkdir -p "$dir"
-
-  if [[ ! -f "$dir/README.md" ]]; then
-    cat > "$dir/README.md" <<EOF
-# $today
-
-## Worked On
-
-## Notes
-
-EOF
-  fi
-
   cd "$dir" || return
 }
 ```
