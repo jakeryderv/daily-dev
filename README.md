@@ -10,33 +10,28 @@ daily-dev/
 ├── projects/
 └── log/
     ├── 2026-09-18/
-    │   ├── entry.yaml
     │   ├── README.md
     │   └── experiment/
     └── 2026-09-19/
-        ├── entry.yaml
         └── README.md
 ```
 
-* `projects/` contains ongoing projects and experiments that span multiple days.
+* `projects/` contains ongoing projects or experiments that span multiple days.
 * `log/` contains one directory per day using the `YYYY-MM-DD` format.
-* `entry.yaml` contains structured metadata that can be queried or analyzed later.
-* `README.md` contains freeform notes about what I worked on, learned, or want to revisit.
+* Each daily `README.md` contains YAML front matter for structured metadata and Markdown for freeform notes.
 * Small, one-off experiments can live directly inside the relevant daily directory.
 
 ## Daily Entry
 
-A minimal `entry.yaml`:
+A minimal daily `README.md`:
 
-```yaml
+```markdown
+---
 date: 2026-09-18
 projects: []
 tags: []
-```
+---
 
-The daily `README.md` can stay lightweight:
-
-```markdown
 # 2026-09-18
 
 ## Worked On
@@ -47,6 +42,8 @@ The daily `README.md` can stay lightweight:
 
 - ...
 ```
+
+The front matter keeps basic metadata easy to parse or query later, while the rest of the file stays flexible and human-readable.
 
 ## Shell Helper
 
@@ -69,4 +66,3 @@ daily
 ```
 
 to create today's log directory if needed and move into it.
-
